@@ -24,16 +24,12 @@ public class Demo1 {
     }
 
     public static void main(String[] args) throws IOException {
-        //获取配置对象
-        Configuration entries = new Configuration();
-        //设置连接参数
-        entries.set("hbase.zookeeper.quorum", "192.168.5.101:2181,192.168.5.102:2181,192.168.5.103:2181");
-        //获取hbase操作客户端对象
+        //获取hbase连接对象
         Connection connection = ConnectionFactory.createConnection(conf);
         //获取操作对象
         Admin connectionAdmin = connection.getAdmin();
         //创建一个namespace的描述器
-        NamespaceDescriptor apiNamespace = NamespaceDescriptor.create("apiNamespace").build();
+        NamespaceDescriptor apiNamespace = NamespaceDescriptor.create("wocao").build();
         apiNamespace.setConfiguration("nz1908", "day day up");
         //创建namespace
         connectionAdmin.createNamespace(apiNamespace);

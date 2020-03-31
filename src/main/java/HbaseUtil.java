@@ -23,10 +23,11 @@ public class HbaseUtil {
         try {
             connection = ConnectionFactory.createConnection(conf);
             admin = connection.getAdmin();
+            return admin;
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return admin;
+        return null;
     }
 
     public static void closeAdmin(Admin admin){
