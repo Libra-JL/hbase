@@ -1,13 +1,16 @@
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
+import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.Admin;
 import org.apache.hadoop.hbase.client.Connection;
 import org.apache.hadoop.hbase.client.ConnectionFactory;
+import org.apache.hadoop.hbase.client.Table;
 
 
 import java.io.IOException;
 
-public class HbaseUtil {
+public final class HbaseUtil {
+    private HbaseUtil(){}
 
     public static Configuration conf;
     private static Admin admin = null;
@@ -28,6 +31,10 @@ public class HbaseUtil {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static Table getTable(TableName tableName) throws IOException {
+        return connection.getTable(tableName);
     }
 
     public static void closeAdmin(Admin admin){
