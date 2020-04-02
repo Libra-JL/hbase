@@ -39,6 +39,7 @@ public class FilterListDemo {
         Scan scan = new Scan();
         scan.setFilter(filterList);
 
+
         //获取表对象
         TableName tableName = TableName.valueOf("default:test");
         Table table = HbaseUtil.getTable(tableName);
