@@ -6,7 +6,12 @@
 
     <groupId>com.lijie</groupId>
     <artifactId>hbase</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>hbase-mr</module>
+        <module>hbase2hdfs</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.apache.hbase</groupId>

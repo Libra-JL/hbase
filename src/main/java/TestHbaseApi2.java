@@ -1,10 +1,8 @@
 import org.apache.hadoop.hbase.*;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
-import org.apache.hadoop.hbase.util.StealJobQueue;
-
 import java.io.IOException;
-import java.time.temporal.ValueRange;
+
 
 public class TestHbaseApi2 {
     public static void main(String[] args) throws IOException {
