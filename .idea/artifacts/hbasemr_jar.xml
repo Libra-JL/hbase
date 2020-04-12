@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
-  <artifact name="hbasemr:jar">
+  <artifact type="jar" build-on-make="true" name="hbasemr:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/hbasemr_jar</output-path>
-    <root id="root">
+    <root id="archive" name="hbasemr_jar.jar">
       <element id="archive" name="hbasemr.jar">
         <element id="module-output" name="hbasemr" />
       </element>

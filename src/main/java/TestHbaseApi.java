@@ -14,7 +14,7 @@ public class TestHbaseApi {
             admin.createNamespace(namespaceDescriptor);
         }
 
-        TableName tableName = TableName.valueOf("lixiaojie:student");
+        TableName tableName = TableName.valueOf("lixiaojie:emp");
         boolean b = admin.tableExists(tableName);
         if (b){
             //query data

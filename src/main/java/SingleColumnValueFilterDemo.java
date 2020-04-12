@@ -1,3 +1,4 @@
+import com.lijie.test.HbaseUtil1;
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.CellUtil;
 import org.apache.hadoop.hbase.TableName;
